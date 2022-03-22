@@ -10,7 +10,8 @@ RUN go get google.golang.org/protobuf/cmd/protoc-gen-go
 RUN go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
 
 # cache go dependencies
-COPY go.mod go.sum .
+COPY go.mod .
+COPY go.sum .
 RUN go mod download
 
 # compile
